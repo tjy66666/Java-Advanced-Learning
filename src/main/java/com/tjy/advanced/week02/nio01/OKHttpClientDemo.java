@@ -13,13 +13,14 @@ import java.io.IOException;
 public class OKHttpClientDemo {
 
     private static OkHttpClient client = new OkHttpClient();
+
     public static void main(String[] args) throws IOException {
 
         getBody1(client, "http://localhost:8801");
         client = null;
     }
 
-    private static void getBody1(OkHttpClient client, String url){
+    private static void getBody1(OkHttpClient client, String url) {
 
         Request request = new Request.Builder()
                 .get()
@@ -32,7 +33,7 @@ public class OKHttpClientDemo {
             System.out.println(responseData);
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             client = null;
         }
     }

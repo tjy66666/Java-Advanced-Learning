@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
  * @author tjy
  */
 public class HttpServer03 {
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
         ExecutorService executorService = Executors.newFixedThreadPool(
                 Runtime.getRuntime().availableProcessors() * 4);
         final ServerSocket serverSocket = new ServerSocket(8803);
@@ -24,7 +24,7 @@ public class HttpServer03 {
             }
         }
     }
-    
+
     private static void service(Socket socket) {
         try {
             PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);

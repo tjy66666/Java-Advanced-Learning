@@ -7,9 +7,9 @@ import java.net.Socket;
 
 /**
  * @author tjy
- */ // 单线程的socket程序
+ */
 public class HttpServer01 {
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
         ServerSocket serverSocket = new ServerSocket(8801);
         while (true) {
             try {
@@ -20,7 +20,7 @@ public class HttpServer01 {
             }
         }
     }
-    
+
     private static void service(Socket socket) {
         try {
             PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);
